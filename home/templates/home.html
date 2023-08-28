@@ -1,0 +1,47 @@
+{% extends 'navigationbar.html' %}
+
+{% load static %}
+
+{% block title %}
+	<title>MINDHUNTER</title>
+{% endblock %}
+
+{% block customcss %}
+	<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block custombody %}
+	<div class="container">
+		<div id="details">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<h2><p>GDSC presents <strong>MINDHUNTER</strong></p></h2>
+					<br>
+					<p> A capture the flag <strong>CTF</strong> event.</p>
+					<br>
+					<h3><p>Rules:</p></h3>
+					<ol>
+						<li>Its a single player competition</li>
+						<li>Player with the most points win the game</li>
+						<li>A tie breaker is resloved using time taken to solve</li>
+						<li>Questions have hints but penalty points are deducted everytime you use them</li>
+						<li><p>Have doubt. Visit our forum section <a href="/forums/" target="_blank"><b>here.</b></a></p></li>
+					</ol>
+					<!-- <p>Challenges are available in following categories</p> -->
+					<!-- <ol>
+						<li>Cryptography</li>
+						<li>Forensics</li>
+						<li>Pwning</li>
+						<li>Reverse Engineering</li>
+						<li>Stegnography</li>
+						<li>Web</li>
+					</ol>
+					<p><b>NOTE: Pwning and Web categories are under development.</b></p> -->
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<img src="https://i1.lensdump.com/i/1bDysA.png" alt="GDSC MINDHUNTER" style="width:400px;height:350px;border-radius: 15px 50px 30px;">
+				</div> 
+			</div>
+		</div>
+	</div>
+{% endblock %}

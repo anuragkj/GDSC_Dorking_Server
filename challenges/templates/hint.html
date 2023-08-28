@@ -1,0 +1,22 @@
+{% extends 'navigationbar.html' %}
+
+{% load static %}
+{% load markdown_extras %}
+{% block title %}
+	<title>HINT</title>
+{% endblock %}
+
+{% block customcss %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/challenges.css' %}">
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block custombody %}
+    <center><div class="content-section">
+        <h3>Hint for the question:</h3>
+        {{ hint | markdown | safe }}
+        <br>
+        <b><a href="{{request.META.HTTP_REFERER}}">Go Back</a></b>
+    </div></center>
+{% endblock %}

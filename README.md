@@ -1,1 +1,2 @@
-# GDSC_Dorking_Server
+# GDSC_CTF_Portal
+A CTF portal for GDSC BITS Pilani
