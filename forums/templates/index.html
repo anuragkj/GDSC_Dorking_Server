@@ -12,14 +12,12 @@
 
 {% block custombody %}
 	
-	<div id="pageHeading">
-		<p>Forums</p>
-	</div>
+<h1 class="text-center">Forums</h1>
 
 	<div class="container">
 		
-		<div id="addForm">
-			<button data-toggle="collapse" data-target="#newThreadForm" id="addNewButton">Add New</button>
+		<div>
+			<button class = "btn btn-default" data-toggle="collapse" data-target="#newThreadForm" id="addNewButton">Add New</button>
 			<div id="newThreadForm" class="collapse">
 				<form method="post" enctype="multipart/form-data" autocomplete="off">
 					{% csrf_token %}

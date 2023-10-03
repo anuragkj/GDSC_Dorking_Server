@@ -20,8 +20,9 @@ class PassInsideView() :
 	file = ''
 	flag = ''
 	author = ''
+	hint_points = ''
 
-	def __init__(self, name, challenge_id, category, description, points, file, flag, author) :
+	def __init__(self, name, challenge_id, category, description, points, file, flag, author, hint_points) :
 		self.name = name
 		self.challenge_id = challenge_id
 		self.category = category
@@ -30,6 +31,7 @@ class PassInsideView() :
 		self.file = file
 		self.flag = flag
 		self.author = author
+		self.hint_points = hint_points
 
 def assignID(a) :
 	return a.lower().replace(' ','_')
@@ -60,7 +62,7 @@ def index(request) :
 			w = PassInsideView(c.name, assignID(c.name), c.category, c.description, c.points, c.file, c.flag, c.author)
 			challenge_info_web_object.append(w)
 		elif c.category == 'Cryptography' :
-			cy = PassInsideView(c.name, assignID(c.name), c.category, c.description, c.points, c.file, c.flag, c.author)
+			cy = PassInsideView(c.name, assignID(c.name), c.category, c.description, c.points, c.file, c.flag, c.author, c.hint_points)
 			challenge_info_crypto_object.append(cy)
 
 	solved_challenges_by_user = []

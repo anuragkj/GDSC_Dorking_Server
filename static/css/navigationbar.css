@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(#fffaf0);
+	background: #000000;
 	font-family: 'Ubuntu';
 }
 
@@ -21,8 +21,8 @@ a:visited {
 #navigationBar {
 	width: 100%;
 	height: 80px;
-	background-color: #444444;
-	color: #999;
+	background-color: #000000;
+	color: #20C20E;
 }
 
 #navigationBar a:hover {
@@ -32,7 +32,7 @@ a:visited {
 .navigationBarLeft , .navigationBarRight {
 	width: 40%;
 	line-height: 80px;
-	background-color: #444;
+	background-color: #000000;
 }
 
 .navigationBarLeft {
@@ -58,7 +58,7 @@ a:visited {
 }
 
 .navigationBarLeft ul li:first-child {
-	color: #eee;
+	color: #20C20E;
 	font-weight: bold;
 	font-size: 24px;
 }
@@ -74,8 +74,8 @@ a:visited {
 #pageHeading {
 	width: 100%;
 	height: 100px;
-	background-color: #444;
-	color: #eee;
+	background-color: #000000;
+	color: #20C20E;
 	text-align: center;
 	line-height: 80px;
 	vertical-align: middle;

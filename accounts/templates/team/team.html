@@ -10,16 +10,13 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/team.css' %}">
 {% endblock %}
 
-{% block custombody %}
+{% block custombody %}	
+	<h1 class="text-center">{{ team_details.teamname }}</h1>
 
-	<div id="pageHeading">
-		<p>{{ team_details.teamname }}</p>	
-	</div>
-	
 	<div class="container">
 		
 		<div id="team_details">
-			<p style="color: #444;"> <b style="font-size: 24px; color: #222">{{ team_details.points }}</b> points</p>
+			<h1><b>{{ team_details.points }}</b> points</p></h1>
 		</div>
 		
 		<div id="solved_challenges">

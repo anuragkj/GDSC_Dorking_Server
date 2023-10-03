@@ -11,6 +11,7 @@
 	{% endblock %}
 
 	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/hacker.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/navigationbar.css' %}">
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
@@ -23,34 +24,34 @@
 
 </head>
 <body>
-
-	<!-- Navigation bar -->
-	<div id="navigationBar">
-		<div class="container">
-			<div class="navigationBarLeft">
-				<ul>
-					<li><a href="/">Google Dorking</a></li>
-					<li class="des"><a href="/scoreboard/">Scoreboard</a></li>
-					<li class="des"><a href="/challenges/">Challenges</a></li>
-					
-				</ul>
-			</div>
-			<div class="navigationBarRight">
-				<ul>
-					<li id="navbarToggle">MENU</li>
-					{% if request.user.is_authenticated %}
-						<li class="des"><a href="/accounts/logout/">Logout</a></li>
-					{% else %}
-						<li class="des"><a href="/accounts/login/">Login</a></li>
-					{% endif %}
-					<!-- <li class="des"><a href="/accounts/profile/">Profile</a></li> -->
-					<li class="des"><a href="/accounts/team/">Players</a></li>
-					<li class="des"><a href="/forums/">Forum</a></li>
-				</ul>
-			</div>
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">Google Hacking</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/scoreboard/">Scoreboard</a></li>
+				<li><a href="/challenges/">Challenges</a></li>
+				
+				<!-- <li class="des"><a href="/accounts/profile/">Profile</a></li> -->
+				<li><a href="/accounts/team/">Players</a></li>
+				<!-- <li><a href="/forums/">Forum</a></li> -->
+				{% if request.user.is_authenticated %}
+					<li><a href="/accounts/logout/">Logout</a></li>
+				{% else %}
+					<li><a href="/accounts/login/">Login</a></li>
+				{% endif %}
+			</ul>
 		</div>
 	</div>
-
+</nav>
 	{% block custombody %}
 	{% endblock %}
 
