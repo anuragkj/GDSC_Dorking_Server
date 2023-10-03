@@ -129,7 +129,7 @@ def flagsubmit(request) :
 			# accounts_models.Teams.objects.filter(teamname=request.user).update(diff=diff_time)
 			response = '<div id="flag_correct"><p>CORRECT(Refresh the challenge page!)</p></div>'
 	elif request.user.is_superuser :
-		response = '<div id="flag_already"><p>Correct, But not added to scoreboard</p></div>'
+		response = '<div id="flag_already"><p>Admin account can not submit flags</p></div>'
 	else :
 		response = '<div id="flag_incorrect"><p>INCORRECT</p></div>'
 	return HttpResponse(response)

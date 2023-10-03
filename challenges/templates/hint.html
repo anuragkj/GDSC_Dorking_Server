@@ -14,7 +14,7 @@
 
 {% block custombody %}
     <center><div class="content-section">
-        <h3>Hint for the question:</h3>
+        <h3 style = "color:yellow">Hint for the question:</h3>
         {{ hint | markdown | safe }}
         <br>
         <b><a href="{{request.META.HTTP_REFERER}}">Go Back</a></b>
