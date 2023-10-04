@@ -1,3 +1,9 @@
+body {
+    font-family: monospace;
+    background: #282129;
+    color: #D6F069;
+}
+
 #register {
 	width: 400px;
 	max-width: 100%;

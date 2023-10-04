@@ -1,3 +1,9 @@
+body {
+    font-family: monospace;
+    background: #282129;
+    color: #D6F069;
+}
+
 #team_details {
 	margin-top: 5%;
 	text-align: center;

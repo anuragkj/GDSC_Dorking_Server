@@ -1,3 +1,9 @@
+body {
+    font-family: monospace;
+    background: #282129;
+    color: #D6F069;
+}
+
 #teamList {
 	margin: 2% 0;
 	text-align: center;
