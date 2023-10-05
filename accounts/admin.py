@@ -5,6 +5,6 @@ from markdownx.admin import MarkdownxModelAdmin
 # Register your models here.
 @admin.register(Teams)
 class TeamsAdmin(MarkdownxModelAdmin):
-    fields = ('teamname', 'email', 'points')
-    list_display = ('teamname', 'email', 'points')
+    fields = ('teamname', 'email', 'points', 'attempts')
+    list_display = ('teamname', 'email', 'points', 'attempts')
 

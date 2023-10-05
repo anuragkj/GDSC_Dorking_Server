@@ -98,6 +98,10 @@ def flagsubmit(request) :
 		flag_submit_id = x[:-5]
 	flag = models.Challenges.objects.get(challenge_id=flag_submit_id).flag
 	points = models.Challenges.objects.get(challenge_id=flag_submit_id).points
+	initial_attempts = accounts_models.Teams.objects.get(teamname=request.user).attempts
+	updated_attempts = initial_attempts + 1
+	accounts_models.Teams.objects.filter(teamname=request.user).update(attempts=updated_attempts)
+
 	if flag == flag_submit and not request.user.is_superuser :
 		fr = models.ChallengesSolvedBy(challenge_id=flag_submit_id, user_name=request.user, points=points)
 		try :
