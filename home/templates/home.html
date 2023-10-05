@@ -11,37 +11,161 @@
 {% endblock %}
 
 {% block custombody %}
-	<div class="container">
-		<div id="details">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<h2><p>GDSC presents <strong>MINDHUNTER</strong></p></h2>
-					<br>
-					<p> A capture the flag <strong>CTF</strong> event.</p>
-					<br>
-					<h3><p>Rules:</p></h3>
-					<ol>
-						<li>Its a single player competition</li>
-						<li>Player with the most points win the game</li>
-						<li>A tie breaker is resloved using time taken to solve</li>
-						<li>Questions have hints but penalty points are deducted everytime you use them</li>
-						<li><p>Have doubt. Visit our forum section <a href="/forums/" target="_blank"><b>here.</b></a></p></li>
-					</ol>
-					<!-- <p>Challenges are available in following categories</p> -->
-					<!-- <ol>
-						<li>Cryptography</li>
-						<li>Forensics</li>
-						<li>Pwning</li>
-						<li>Reverse Engineering</li>
-						<li>Stegnography</li>
-						<li>Web</li>
-					</ol>
-					<p><b>NOTE: Pwning and Web categories are under development.</b></p> -->
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<img src="https://i1.lensdump.com/i/1bDysA.png" alt="GDSC MINDHUNTER" style="width:400px;height:350px;border-radius: 15px 50px 30px;">
-				</div> 
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div id="details">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h2>
+                        <p>
+                            GDSC presents 
+                            <!-- Glitch animation -->
+                            <div class="hero-container">
+                                <p class="hero glitch layers" data-text="GOOGLE HACKING">
+                                    <span class="googlehacking">GOOGLE HACKING</span>
+                                </p>
+                            </div>
+                            <!-- end of glitch animation -->
+                        </p>
+                    </h2>
+                    <br>
+
+
+                    <!-- added hacking animation text here -->
+                    <div class="hacker-animation">
+                        <p style="font-size: clamp(20px, 10vw, 40px);">An event featuring</p>
+                        <div id="hacker-loading-animation-1" style="font-family: Hack, monospace;">hacking,</div>
+                        <div id="hacker-loading-animation-2" style="font-family: Hack, monospace;">dorking,</div>
+                        <div id="hacker-loading-animation-3" style="font-family: Hack, monospace;">CTF and more</div>
+                    </div>
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                    <script>
+                            alphabet = new Array("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
+                            letter_count = 0;
+                            el = $("#hacker-loading-animation-1");
+                            console.log(el);
+                            word = el.html().trim();
+                            finished = false;
+                
+                            el.html("");
+                            for (var i = 0; i < word.length; i++) {
+                                el.append("<span class=\"name-loader\">" + word.charAt(i) + "</span>");
+                            }
+                
+                            setTimeout(write, 75);
+                            incrementer = setTimeout(inc, 550);
+                
+                
+                            function write() {
+                                for (var i = letter_count; i < word.length; i++) {
+                                    var c = Math.floor(Math.random() * 36);
+                                    $(".name-loader")[i].innerHTML = alphabet[c];
+                                }
+                                if (!finished) {
+                                    setTimeout(write, 75);
+                                }
+                            }
+                
+                            function inc() {
+                                $(".name-loader")[letter_count].innerHTML = word[letter_count];
+                                $(".name-loader:eq(" + letter_count + ")").addClass("glow");
+                                letter_count++;
+                                if (letter_count >= word.length) {
+                                    finished = true;
+                                } else {
+                                    setTimeout(inc, 550);
+                                }
+                            }
+                
+                    </script>
+                    <script>alphabet = new Array("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
+                        letter_count_2 = 0;
+                        el2 = $("#hacker-loading-animation-2");
+                        word2 = el2.html().trim();
+                        finished2 = false;
+                
+                        el2.html("");
+                        for (var i = 0; i < word2.length; i++) {
+                            el2.append("<span class=\"name-loader-2\">" + word2.charAt(i) + "</span>");
+                        }
+                
+                        setTimeout(write2, 75);
+                        incrementer2 = setTimeout(inc2, 550);
+                
+                
+                        function write2() {
+                            for (var i = letter_count_2; i < word2.length; i++) {
+                                var c = Math.floor(Math.random() * 36);
+                                $(".name-loader-2")[i].innerHTML = alphabet[c];
+                            }
+                            if (!finished2) {
+                                setTimeout(write2, 75);
+                            }
+                        }
+                
+                        function inc2() {
+                            $(".name-loader-2")[letter_count_2].innerHTML = word2[letter_count_2];
+                            $(".name-loader-2:eq(" + letter_count_2 + ")").addClass("glow");
+                            letter_count_2++;
+                            if (letter_count_2 >= word2.length) {
+                                finished2 = true;
+                            } else {
+                                setTimeout(inc2, 550);
+                            }
+                        }
+                    </script>
+                    <script>alphabet = new Array("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
+                        letter_count_3 = 0;
+                        el3 = $("#hacker-loading-animation-3");
+                        word3 = el3.html().trim();
+                        finished3 = false;
+                
+                        el3.html("");
+                        for (var i = 0; i < word3.length; i++) {
+                            el3.append("<span class=\"name-loader-3\">" + word3.charAt(i) + "</span>");
+                        }
+                
+                        setTimeout(write3, 75);
+                        incrementer3 = setTimeout(inc3, 550);
+                
+                
+                        function write3() {
+                            for (var i = letter_count_3; i < word3.length; i++) {
+                                var c = Math.floor(Math.random() * 36);
+                                $(".name-loader-3")[i].innerHTML = alphabet[c];
+                            }
+                            if (!finished3) {
+                                setTimeout(write3, 75);
+                            }
+                        }
+                
+                        function inc3() {
+                            $(".name-loader-3")[letter_count_3].innerHTML = word3[letter_count_3];
+                            $(".name-loader-3:eq(" + letter_count_3 + ")").addClass("glow");
+                            letter_count_3++;
+                            if (letter_count_3 >= word3.length) {
+                                finished3 = true;
+                            } else {
+                                setTimeout(inc3, 350);
+                            }
+                        }
+                    </script>
+                    <!-- end of hacking animation -->
+
+
+                    <br>
+                    <h3><p>Rules:</p></h3>
+                    <ol>
+                        <li>Its a two player competition</li>
+                        <li>Player with the most points win the game</li>
+                        <li>A tie breaker is resolved using time taken to solve</li>
+                        <li>Timer starts when you login, so you can participate at any time</li>
+                        <li>Questions have hints but penalty points are deducted <strong>EVERY TIME</strong> you use them</li>
+                    </ol>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <img src="https://img.freepik.com/free-photo/html-css-collage-concept-with-hacker_23-2150061984.jpg" alt="GDSC GOOGLE HACKING" style="width:400px;height:350px;border-radius: 15px 50px 30px;">
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
